@@ -24,7 +24,7 @@
 }
 
 body {
-    background-image: url(/src/images/pagina_inicial.png);
+    background-image: url(pagina_inicial.png);
     background-repeat: no-repeat;
     width: 100vw;
     height: 100vh;
