@@ -1,0 +1,70 @@
+#logo {
+  width: 2.5rem;
+}
+
+#botao-cadastro {
+  margin-right: 0.6rem;
+  width: 8.0rem;
+  height: 2.5rem;
+  color: #36B2EB;
+  border-color: #36B2EB;
+  border-radius: 8px;
+}
+
+#botao-entrar {
+  width: 7rem;
+  height: 2.5rem;
+  background-color: #36B2EB;
+  border-color: #36B2EB;
+  border-radius: 8px;
+}
+
+.nav-link {
+  color: #292929 !important;
+}
+
+#servicos {
+  display: grid !important;
+}
+
+#servicos img {
+  margin-top: 20px;
+  width: 250px;
+  height: 149px;
+}
+
+#servicos p {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  color: #292929 !important;
+  position: relative;
+}
+
+h1 {
+  color: #36B2EB !important;
+  justify-content: center;
+  display: flex;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 35px;
+}
+
+
+@media screen and (max-width: 280px) {
+  #botao-entrar {
+    width: 6rem;
+    height: 2rem;
+    font-size: 0.8rem;
+  }
+
+  #botao-cadastro {
+    width: 6rem;
+    height: 2rem;
+    font-size: 0.8rem;
+  }
+}
+
+@media (min-width: 0px) and (max-width: 540px) {
+  #servicos {
+    justify-items: center;
+  }
+}
