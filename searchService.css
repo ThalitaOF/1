@@ -1,0 +1,161 @@
+.back-page {
+  display: flex;
+  margin-left: 20px;
+}
+.page {
+  padding: 1rem;
+  border: 1px solid #fff;
+  border-radius: 8px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.5rem;
+  border: none;
+  background: #36b2eb;
+  border-radius: 2px;
+  padding: 1rem;
+  color: #fff;
+  background: transparent;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.2rem;
+}
+.fundo-mecanico {
+  padding: 3rem;
+  background: #36b2eb;
+}
+
+.infos-provider {
+  margin-top: 5rem;
+  display: flex;
+  margin-left: 1.4rem;
+}
+
+.infos {
+  margin-left: 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.text-about {
+  margin-top: 2rem;
+}
+
+.border {
+  border: 1px solid #000;
+  width: 150px;
+  height: 150px;
+}
+
+p {
+  font-size: 24px;
+  font-weight: bold;
+  color: #36b2eb;
+}
+.see-profile {
+  border: none;
+  font-weight: bold;
+  border-radius: 8px;
+  padding: 1rem;
+  color: #fff;
+  background: #36b2eb;
+}
+
+h5 {
+  font-size: 1.5rem;
+  margin-left: 1rem;
+}
+
+.alo {
+  display: flex;
+  flex-direction: column;
+}
+span {
+  color: #fff;
+}
+#logo {
+  width: 2.5rem;
+}
+
+#botao-cadastro {
+  margin-right: 0.6rem;
+
+  width: 8rem;
+
+  height: 2.5rem;
+
+  color: #36b2eb;
+
+  border-color: #36b2eb;
+
+  border-radius: 8px;
+}
+
+.search {
+  display: flex;
+  width: 950px;
+  flex-direction: column;
+}
+
+#botao-entrar {
+  width: 7rem;
+
+  height: 2.5rem;
+
+  background-color: #36b2eb;
+
+  border-color: #36b2eb;
+
+  border-radius: 8px;
+}
+
+.nav-link {
+  color: #292929 !important;
+}
+
+@media screen and (max-width: 820px) {
+  .infos-provider {
+    width: 350px;
+  }
+  .see-profile {
+    padding: 0.9rem;
+    font-size: 0.7rem;
+  }
+  .infos {
+    align-items: center;
+  }
+  .border {
+    width: 80px !important;
+    height: 80px;
+  }
+  p {
+    font-size: 1.1rem;
+  }
+  h5 {
+    font-size: 1.1rem;
+  }
+  .search {
+    width: 350px;
+    margin-left: 1rem;
+  }
+}
+
+@media screen and (max-width: 280px) {
+  /*#botao-entrar {
+    width: 6rem;
+    height: 2rem;
+    font-size: 0.8rem;
+  }
+
+  #botao-cadastro {
+    width: 6rem;
+    height: 2rem;
+    font-size: 0.8rem;
+  }*/
+
+  .fundo-mecanico h1 {
+    width: 100%;
+    font-size: 1.5rem
+  }
+}

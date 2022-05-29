@@ -1,0 +1,90 @@
+#logo {
+    width: 2.5rem;
+}
+
+#botao-cadastro {
+    margin-right: 0.6rem;
+    width: 8.0rem;
+    height: 2.5rem;
+    color: #36B2EB;
+    border-color: #36B2EB;
+    border-radius: 8px;
+}
+
+#botao-entrar {
+    width: 7rem;
+    height: 2.5rem;
+    background-color: #36B2EB;
+    border-color: #36B2EB;
+    border-radius: 8px;
+}
+
+.nav-link {
+    color: #292929 !important;
+}
+
+body {
+    background-image: url(/src/images/pagina_inicial.png);
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 100vh;
+    background-size: 100% 100%;
+}
+
+.row {
+    justify-content: center;
+    text-align: center;
+}
+
+input {
+    padding: 0.5rem;
+    width: 60%;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+}
+
+h1, p {
+    color: #fff;
+    margin-bottom: 5%;
+}
+
+@media (max-width: 280px) {
+    h1 {
+        font-size: 2rem;
+        margin-top: 2rem;
+    }
+
+    #botao-entrar {
+        width: 6rem;
+        height: 2rem;
+        font-size: 0.8rem;
+    }
+
+    #botao-cadastro {
+        width: 6rem;
+        height: 2rem;
+        font-size: 0.8rem;
+    }
+
+    input {
+        width: auto;
+    }
+}
+
+@media (max-width: 912px) {
+.conteudo {
+    margin-top: 45%;
+}
+h1 {
+    font-size: 2.7rem;
+    font-weight: 700;
+    margin-bottom: 5%;
+}
+}
+
+@media (min-width: 950px) {
+.conteudo {
+    margin-top: 10%;
+}
+}
