@@ -1,0 +1,32 @@
+h3 {
+    font-size: 35px;
+    font-family: roboto;
+    color: #36B2EB;
+    margin-left: 20rem;
+    display: flex;
+}
+
+img {
+    align-items: center;
+    justify-content: center;
+    margin-left: 25rem;
+    display: flex;
+}
+
+@media (min-width: 0px) and (max-width: 912px) {
+
+    h3 {
+        margin-left: 3rem;
+        align-items: center;
+
+    }
+
+    img {
+        display: flex;
+        margin-left: 2rem;
+        width: 20rem;
+        align-items: center;
+        justify-content: center;
+    }
+
+}
