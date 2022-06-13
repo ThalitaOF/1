@@ -113,7 +113,7 @@
     width: 100%;
 }
 
-#botao-criarconta {
+#salvar {
     width: 55%;
     background-color: #36B2EB;
     color: white;
@@ -126,7 +126,7 @@
     margin-top: 2rem;
 }
 
-#botao-criarconta:focus {
+#salvar:focus {
     outline-color: transparent;
 }
 
@@ -198,7 +198,7 @@
 }
 
 @media (width: 280px) {
-    #botao-criarconta {
+    #salvar {
         width: 6rem;
         height: 2rem;
         font-size: 0.8rem; 

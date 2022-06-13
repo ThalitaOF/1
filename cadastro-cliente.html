@@ -15,7 +15,12 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;700&display=swap" rel="stylesheet">
-
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,400;0,700;1,200;1,800&display=swap"
+    rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.11/jquery.mask.min.js"></script>
+  <script src="cadastro-cliente.js" defer></script>
 </head>
 
 <body>
@@ -69,73 +74,57 @@
         <p id="campos-obrigatorios">*Campos obrigatórios</p>
       </div>
 
-      <form>
-        <!--action="CadastroCliente" method="list"-->
+      <form id="form" action="javascript:alert('Cadastro realizado com sucesso')" method="post" class="modal-form">
         <div class="campo-form">
           <label for="nomecompleto">Nome Completo:<span style="color: #ED1717">*</span></label>
-          <input type="text" id="nomecompletocliente" name="nomecompleto">
+          <input type="text" id="nome" data-index="new" class="modal-field" required>
         </div>
 
         <div class="campo-form">
           <label for="cpf">CPF:<span style="color: #ED1717">*</span></label>
-          <input type="text" id="cpfcliente" name="cpf">
+          <input type="text" id="cpf" class="modal-field" placeholder="000.000.000-00" minlength="14" maxlength="14"
+            required>
         </div>
 
         <div class="campo-form">
           <label for="telefone">Telefone:<span style="color: #ED1717">*</span></label>
-          <input type="text" id="telefonecliente" name="telefone">
+          <input type="text" id="telefone" name="telefone" class="modal-field" placeholder="(00) 0 0000-0000"
+            maxlength="17" required>
         </div>
 
         <div class="campo-form">
           <label for="e-mail">E-mail:<span style="color: #ED1717">*</span></label>
-          <input type="text" id="e-mailcliente" name="e-mail">
+          <input type="email" id="email" class="modal-field" placeholder="exemple@exemple.com" required>
         </div>
 
         <div class="senha-form">
 
           <div class="campo-form">
             <label for="senha">Senha:<span style="color: #ED1717">*</span></label>
-            <input type="text" id="senhacliente" name="senha">
+            <input type="password" id="senha" class="modal-field" placeholder="Mínimo 6 digitos" minlength="6" required>
           </div>
 
           <div class="campo-form">
             <label for="confirmacaosenha">Confirmação de Senha:<span style="color: #ED1717">*</span></label>
-            <input type="text" id="confirmacaosenhacliente" name="confirmacaodesenha">
+            <input type="password" id="confirmacao" class="modal-field" placeholder="Confirme sua senha" minlength="6"
+              required>
           </div>
+        </div>
+
+        <div class="botao-form" type="button" data-toggle="modal" data-target="#exampleModal">
+          <button id="salvar" class="button green" data-toggle="modal" data-target="#modalExemplo">Criar Conta</button>
         </div>
 
       </form>
-
-      <div class="botao-form" type="button" data-toggle="modal" data-target="#exampleModal">
-        <button id="botao-criarconta" data-toggle="modal" data-target="#modalExemplo">Criar Conta</button>
-      </div>
-
     </div>
   </div>
 
-  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-    aria-hidden="true">
 
-    <div class="modal-dialog modal-dialog-centered" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
+  <script type="text/javascript">
+    $("#telefone").mask("(00) 0 0000-0000");
+    $("#cpf").mask("000.000.000-00");
 
-          <div class="modal-body">
-            <div class="titulo-modal">
-              <div class="imagem-modal" style="display: flex; align-items: center; flex-direction: column-reverse;">
-                <img id="simbolo-modal" src="símbolo - ok.png" alt="simbolo-modal">
-              </div>
-              <p style="text-align: center; margin-top: 1rem;">Cadastro finalizado com sucesso!</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
+  </script>
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
     integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
     crossorigin="anonymous"></script>
