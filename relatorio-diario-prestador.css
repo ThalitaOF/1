@@ -1,0 +1,157 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+  }
+  
+  #logo {
+    width: 2.5rem;
+  }
+  
+  #botao-cadastrorx {
+    margin-right: 0.6rem;
+    width: 8.0rem;
+    height: 2.5rem;
+    color: #210260;
+    border-color: #210260;
+    border-radius: 8px;
+  }
+  
+  #botao-entrarrx {
+    width: 7rem;
+    height: 2.5rem;
+    background-color: #210260;
+    border-color: #210260;
+    border-radius: 8px;
+  }
+  
+  .nav-link {
+    color: #292929 !important;
+  }
+  
+  .container {
+    justify-content: center;
+    display: flex;
+    margin-top: 40px;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .header {
+    background: #fff;
+    padding: 0.9rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .containerPrestadorrx {
+    background-color: #210260;
+    height: 8.5rem;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 1.05rem;
+  }
+  
+  .Ola {
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 2.5rem;
+    text-align: end;
+    padding-top: 0.5rem;
+    padding-right: 1rem;
+    padding-bottom: 1rem;
+  }
+  
+  .menu-prestador {
+    text-align: end;
+    padding-right: 1rem;
+  }
+  
+  #dropdownmenubutton {
+    background: transparent;
+    color: white;
+  }
+  
+  #titulo-meuperfil {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    margin-top: 1.5rem;
+  }
+  
+  
+  @media (min-width:0px) and (max-width: 280px) {
+    #botao-entrarrx {
+      width: 6rem;
+      height: 2rem;
+      font-size: 0.8rem;
+    }
+  
+    #botao-cadastrorx {
+      width: 6rem;
+      height: 2rem;
+      font-size: 0.8rem;
+    }
+  
+  #titulo-meuperfil {
+    font-size: 1.5rem !important;
+  }
+  
+  .ola {
+    font-weight: 200;
+  }
+  
+}
+
+.button{
+    border-style: none;
+    height: 40px;
+    padding: 6px 12px;
+    background-color: black;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: box-shadow .6s ease;
+}
+
+.button.blue{
+    background-color: #36B2EB;
+}
+
+button.green{
+    background-color: #32EF39;
+}
+
+button.red{
+    background-color: #ED1717;
+}
+
+.button:hover{
+    box-shadow: inset 200px 0 0 #00000055;
+}
+
+@media(max-width:480px){
+    .button.mobile{
+        color:transparent;
+        font-size:0;
+        width:50px;
+        height:50px;
+        border-radius: 50%;
+        position:fixed;
+        top: 90vh;
+        left: 80vw;
+    }
+    .button.mobile::before{
+        content: "+";
+        color:black;
+        font-size:2rem;
+        width:100%;
+        height:100%;
+    }
+}

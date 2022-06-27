@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,400;0,700;1,200;1,800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="cssCrudAgendamento/main.css">
+    <link rel="stylesheet" href="cssCrudAgendamento/button.css">
+    <link rel="stylesheet" href="cssCrudAgendamento/records.css">
+    <link rel="stylesheet" href="cssCrudAgendamento/modal.css">
+    <script src="mainAgendamento.js" defer></script>
+    <title>CRUD</title>
+</head>
+
+<body>
+    <header>
+        <h1 class="header-title">AGENDAMENTOS <span id="dbProvider.nome"></span></h1>
+    </header>
+    <main>
+        <button type="button" class="button blue mobile" id="novoAgendamento">Novo Agendamento</button>
+        <table id="tableProvider" class="records">
+            <thead>
+                <tr>
+                    <th>Nome </th>
+                    <th>Telefone</th>
+                    <th>E-mail</th>
+                    <th>Data</th>
+                    <th>Hora</th>
+                    <th>Atividade</th>
+                    <th>Ação</th>
+                </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+        <div class="modal" id="modal">
+            <div class="modal-content">
+                <header class="modal-header">
+                    <h2>NOVO AGENDAMENTO</h2>
+                    <span class="modal-close" id="modalClose">&#10006;</span>
+                </header>
+
+                <div style="padding: 0 20px;">
+                    <div id="dadosCliente"></div>
+                    <div id="dadosPrestador"></div>
+                </div>
+                
+
+                <form id="form" class="modal-form">
+                    <input type="text" id="id-agendamento" data-index="new" class="modal-field" placeholder="ID" required style="display: none;">
+                    <!--
+                    <input type="tel" id="telefone" class="modal-field" placeholder="Celular do Cliente" required>
+                    <input type="email" id="email" class="modal-field" placeholder="Email do Cliente" required>-->
+                    <input type="date" id="data" class="modal-field" placeholder="Data do agendamento" required>
+                    <input type="time" id="hora" class="modal-field" placeholder="Hora do agendamento" required>
+                    <!--<select name="select" id="atividade" style="border-radius: none;">
+
+                        <option value="Barbeiro">Barbeiro </option>
+                        <option value="Cabeleireiro(a)">Cabeleireiro(a)</option>
+                        <option value="Diarista">Diarista</option>
+                        <option value="Eletricista">Eletricista</option>
+                        <option value="Encanador">Encanador</option>
+                        <option value="Marceneiro">Marceneiro</option>
+                        <option value="Massoterapeuta">Massoterapeuta</option>
+                        <option value="Mecânico">Mecânico</option>
+                        <option value="Piscineiro">Piscineiro</option>
+                      </select>-->
+                </form>
+                <footer class="modal-footer">
+                    <button id="salvar" class="button green">Salvar</button>
+                    <button id="cancelar" class="button red">Cancelar</button>
+                </footer>
+            </div>
+        </div>
+    </main>
+
+</body>
+
+</html>

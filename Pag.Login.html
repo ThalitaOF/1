@@ -5,16 +5,18 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>Login - Agenda Fácil</title>
-    <link rel="stylesheet" href="Pag.Login.css">
+    <link rel="stylesheet" href="./Pages CSS/Pag.Login.css">
     <!--Bootstrap CSS-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
         integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script defer src="./js/loginForm.js"></script>
+    <script src="./js/loginAnimado.js"></script>
 </head>
 
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light" style="background-color: white !important;">
-        <a class="navbar-brand" href="index.html">
-            <img id="logo" src="agenda-img-logo.png" alt="Logo Agenda Fácil">
+        <a class="navbar-brand" href="./pagina_inicial.html">
+            <img id="logo" src="./images/agenda-img-logo.png" alt="Logo Agenda Fácil">
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -24,10 +26,10 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="index.html">Página Inicial</a>
+                    <a class="nav-link" href="./pagina_inicial.html">Página Inicial</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="Serviços.html">Serviços</a>
+                    <a class="nav-link" href="./Pag.Login.html">Serviços</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="Pag.Login.html">Agendamentos</a>
@@ -52,17 +54,17 @@
     </nav>
     <div class="conteudo">
         <div class="logo-form">
-            <img src="logo.png" class="rounded mx-auto d-block" id="imagem-logo">
+            <img src="./img/logo.png" class="rounded mx-auto d-block" id="imagem-logo">
         </div>
 
         <div class="container">
-            <form action="/pagina-processa-dados-do-form" method="post">
+            <form id="login-form">
                 <div class="dados">
                     <div class="mb">
                         <label for="email">E-mail:</label>
                     </div>
                     <div class="col-sm-10">
-                        <input type="email" id="email">
+                        <input name="email" type="email" id="email">
                     </div>
                     <div class="mb">
                         <label for="senha">Senha:</label>
@@ -74,9 +76,9 @@
                         <label for="tipo_de_usuario">Tipo de usuário:</label>
                     </div>
                     <div class="col-sm-10">
-                        <select class="tipo_de_usuario" name="tipo_de_usuario">
+                        <select class="tipo_de_usuario" name="tipo_de_usuario" id="tipo_de_usuario">
                             <option value="cliente">Cliente</option>
-                            <option value="prestador_de_serviços">Prestador de Serviços</option>
+                            <option value="prestador_de_servicos">Prestador de Serviços</option>
                         </select>
                     </div>
                 </div>
@@ -87,19 +89,13 @@
                     <span class="checkbox-label">
                         Mantenha-me conectado
                     </span>
-                    <button class="login"><a href="meu-perfil-cliente.html"style="color: #FFFFFF; margin-bottom: none;">Entrar</a></button>
+                    <button type="submit" id="login-form-submit" class="login" style="color: #FFFFFF; margin-bottom: none;">Entrar</button>
                 </div>
 
             </form>
         </div>
-        
     </div>
     </div>
-   
-    
-   
-
-
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"

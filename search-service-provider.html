@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
   <meta charset="UTF-8" />
@@ -14,8 +14,9 @@
     rel="stylesheet" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="searchService.css" />
-
+  <link rel="stylesheet" href="Pages CSS/searchService.css" />
+  <script src="search-service-provider.js" defer></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
   <title>Agenda Fácil</title>
 
   <!--Bootstrap CSS-->
@@ -26,8 +27,8 @@
 
 <body>
   <nav class="navbar navbar-expand-lg navbar-light bg-light" style="background-color: white !important">
-    <a class="navbar-brand" href="index.html">
-      <img id="logo" src="agenda-img-logo.png" alt="Logo Agenda Fácil" />
+    <a class="navbar-brand" href="./pagina_inicial.html">
+      <img id="logo" src="./images/agenda-img-logo.png" alt="Logo Agenda Fácil" />
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
       aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
@@ -37,73 +38,72 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item">
-          <a class="nav-link" href="index.html">Página Inicial</a>
+          <a class="nav-link" href="./pagina_inicial.html">Página Inicial</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="Serviços.html">Serviços</a>
+          <a class="nav-link" href="search-service-provider.html">Serviços</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="Pag.Login.html">Agendamentos</a>
+          <a class="nav-link" href="crudAgendamento.html">Agendamentos</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="guiaSobreNos.html">Sobre Nós</a>
+          <a class="nav-link" href="./guiaSobreNos.html">Sobre Nós</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="guiaFaleConosco.html">Fale Conosco</a>
+          <a class="nav-link" href="./guiaFaleConosco.html">Fale Conosco</a>
         </li>
       </ul>
       <form class="form-inline my-2 my-lg-0">
-        <a href="Quem_sou_eu.html"><button type="button" class="btn btn-outline-primary" id="botao-cadastro">Cadastre-se</button></a>
+        <a href="Quem_sou_eu.html"><button type="button" class="btn btn-outline-primary"
+            id="botao-cadastro">Cadastre-se</button></a>
         <a href="Pag.Login.html"><button type="button" class="btn btn-primary" id="botao-entrar">Entrar</button></a>
 
-    </form>
+      </form>
     </div>
   </nav>
-  
+
   <div class="fundo-mecanico text-center">
-    <h1>Encontramos <span>02 mecânicos</span> em <span>Igarapé/MG</span></h1>
-  </div>
-
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12">
-        <div class="infos-provider">
-          <div class="border"></div>
-          <div class="search">
-            <div class="infos">
-              <p>João Paulo da Silva</p>
-              <a href="about-provider.html"><button class="see-profile">Ver perfil</button></a>
-            </div>
-            <div class="text-about">
-              <h5>
-                Oi, meu nome é João Paulo, sou mecânico especialista em manutenção de veículo de grande porte, como
-                caminhões, tratores e carretas.
-
-              </h5>
-            </div>
-          </div>
-        </div>
+    <h2 id="tituloParceiro">Aqui estão alguns de nossos parceiros:</h2>
+    <form id="form-contato">
+      <div class="form-group row">
+          <select name="filtro_cidade" onchange="atualizouSelect()" id="filtro_cidade" class="filtro_cidade">
+            <option value="selecione">Selecione sua cidade:</option>
+            <option id=" cidade" value="belohorizonte">Belo Horizonte, MG</option>
+            <option id="cidade" value="ouropreto">Ouro Preto, MG</option>
+            <option id="cidade" value="diamantina">Diamantina, MG</option>
+            <option id="cidade" value="Tiradentes">Tiradentes, MG</option>
+          </select>
       </div>
-
-      <div class="col-md-12">
-        <div class="infos-provider">
-          <div class="border"></div>
-          <div class="search">
-            <div class="infos">
-              <p>Santos Mecânica</p>
-              <a href="about-provider.html"><button class="see-profile">Ver perfil</button></a>
-            </div>
-            <div class="text-about">
-              <h5>
-                Somos a Santos Mecânica, uma microempresa que possui mais de 15 (quinze) anos de experiência e tradição
-                no mercado.
-              </h5>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    </form>
   </div>
+  <!--Filtro-->
+ 
+
+  <!--Tabela-->
+ 
+<div class="table-responsive">
+  <table id="tableProvider" class="table align-middle">
+    <thead class="thead-light">
+      <tr>
+        <th scope="col">Prestador</th>
+        <th scope="col">Atividade</th>
+        <th scope="col">Cidade</th>
+        <th scope="col">Descrição</th>
+        <th scope="col">Contato</th>
+        <th scope="col">E-mail</th>
+        <th scope="col"></th>
+      </tr>
+    </thead>
+    <tbody id="table-contatos">
+    </tbody>
+  </table>
+</div>
+      
+
+  
+  
+
+  
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
     integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
     crossorigin="anonymous"></script>
@@ -115,6 +115,17 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js"
     integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
     crossorigin="anonymous"></script>
+  <script>
+    $("#btn-mensagem").click(function () {
+      $("#modal-mensagem").modal();
+    });
+  </script>
+
+  <script>
+    $("#btn-agendamento").click(function () {
+      $("#confirm-agendamento").modal();
+    });
+  </script>
 </body>
 
 </html>
